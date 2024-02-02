@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test';
 
+test.beforeAll(() => undefined)
+
 test('get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
