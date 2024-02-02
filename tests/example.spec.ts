@@ -8,4 +8,8 @@ test('get started link', async ({ page }) => {
 
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+
+  await page.getByRole('link', { name: 'Mock APIs' }).click();
+
+  await expect(page.getByRole('heading', { name: 'Mock API requests' })).toBeVisible();
 });
